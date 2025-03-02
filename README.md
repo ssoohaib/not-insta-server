@@ -106,12 +106,5 @@ CREATE TABLE images_categories (
   PRIMARY KEY (image_id, category_id)
 );
 
--- PROFILE_PICTURES TABLE########################################
-CREATE TABLE profile_pictures (
-  uuid UUID PRIMARY KEY,
-  user_uuid UUID REFERENCES users(uuid) ON DELETE CASCADE,
-  image_name TEXT NOT NULL,
-  uploaded_at TIMESTAMP DEFAULT NOW()
-);
 ```
     
