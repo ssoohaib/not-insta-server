@@ -1,6 +1,6 @@
 # not-insta-server
 
-Server has all the necessary routes, middlewares, and utilizes s3 bucket to store user images.
+Server has all the necessary routes, middlewares, and utilizes S3 bucket to store user images. Also a cron job runs every minute to welcome new users.
 ## Installation
 
 Install not-insta-server with npm
