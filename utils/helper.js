@@ -1,4 +1,6 @@
 const jwt = require("jsonwebtoken");
+const dotenv = require('dotenv')
+dotenv.config()
 
 const generateAccessToken = (user) => {
     return {
@@ -14,6 +16,14 @@ const generateAccessToken = (user) => {
     }
   };
 
+const verifyToken = (token) => {
+    try {
+        return jwt.verify(token, process.env.JWT_SECRET);
+    } catch (err) {
+        return null;
+    }
+};
+
 function generateOTP() {
     return Math.floor(100000 + Math.random() * 900000).toString();
 }
@@ -21,5 +31,6 @@ function generateOTP() {
 module.exports={
     generateAccessToken,
     generateRefreshToken,
-    generateOTP
+    generateOTP,
+    verifyToken
 }
