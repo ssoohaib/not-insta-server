@@ -6,7 +6,7 @@ const startCronJobs = require("./utils/cronJobs");
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: "*", methods: "GET,HEAD,PUT,PATCH,POST,DELETE" }));
 app.use(express.json());
 
 app.use('/', require('./routes/authRoutes'));
@@ -19,5 +19,5 @@ app.get("/", (req, res) => {
 
 startCronJobs();
 
-const PORT = process.env.PORT;
-app.listen(PORT, async () => console.log(`Server running on http://localhost:${PORT}`));
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
