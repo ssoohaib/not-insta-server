@@ -1,4 +1,4 @@
-# not-insta-server
+# not-insta-server-
 
 Server has all the necessary routes, middlewares, and utilizes S3 bucket to store user images. Also a cron job runs every minute to welcome new users.
 ## Installation
