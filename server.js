@@ -20,4 +20,4 @@ app.get("/", (req, res) => {
 startCronJobs();
 
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, '0.0.0.0', async () => console.log(`Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
