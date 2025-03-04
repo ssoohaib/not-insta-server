@@ -25,8 +25,6 @@ Install not-insta-server with npm
     
 ## .env
 
-Install not-insta-server with npm
-
 ```bash
   PORT=
 
