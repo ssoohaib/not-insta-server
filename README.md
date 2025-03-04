@@ -2,7 +2,7 @@
 
 Server has all the necessary routes, middlewares, and utilizes S3 bucket to store user images. Also a cron job runs every minute to welcome new users.
 <br/>
-Also production branch is connected to Railway and the server can be accessed with the following url:
+Production branch is connected to Railway and the server can be accessed with the following url:
 <br/>
 https://not-insta-server-production.up.railway.app/
 
